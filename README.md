@@ -8,3 +8,5 @@ The two relevant files are:
 
 -   `d_adam`: Implementation of the Adam variant of D-Adapation
 -   `train_mnist`: CNN Model for MNIST
+
+The code closely follows the official implementation.

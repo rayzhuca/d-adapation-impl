@@ -17,32 +17,28 @@ class DAdam(Optimizer):
         super().__init__(params, defaults)
 
     def step(self):
-        sk_l1 = 0.0
-
         group = self.param_groups[0]
-        numerator_weighted = group['numerator_weighted']
         beta1, beta2 = group['betas']
+        numerator_weighted = group['numerator_weighted']
 
-        k = group['k']
-        d = group['d']
-        lr = max(group['lr'] for group in self.param_groups)
+        sk_l1 = 0.0
+        d, k = group['d'], group['k']
         dlr = d*lr
         growth_rate = group['growth_rate']
+        lr = max(group['lr'] for group in self.param_groups)
         sqrt_beta2 = beta2**(0.5)
         numerator_acum = 0.0
 
         for group in self.param_groups:
-            k = group['k']
-            eps = group['eps']
             group_lr = group['lr']
+            eps = group['eps']
+            k = group['k']
 
             for p in group['params']:
-                if p.grad is None:
-                    continue
-                
+                if p.grad is None: continue
                 grad = p.grad.data
                 state = self.state[p]
-
+                
                 if 'step' not in state:
                     state['step'] = 0
                     state['s'] = torch.zeros_like(p.data).detach()
@@ -65,8 +61,7 @@ class DAdam(Optimizer):
 
         d_hat = d
 
-        if sk_l1 == 0:
-            return        
+        if sk_l1 == 0: return        
   
         global_numerator_weighted = sqrt_beta2*numerator_weighted + (1-sqrt_beta2)*numerator_acum
         global_sk_l1 = sk_l1
@@ -83,8 +78,7 @@ class DAdam(Optimizer):
             eps = group['eps']
 
             for p in group['params']:
-                if p.grad is None:
-                    continue
+                if p.grad is None: continue
 
                 grad = p.grad.data
                 state = self.state[p]
