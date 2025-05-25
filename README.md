@@ -1,12 +1,12 @@
-# D-Adaption Implementation
+# D-Adaptation Implementation
 
-This repository contains an implementation for D-Adaption and also
+This repository contains an implementation for D-Adaptation and also
 as well as a standard implementation of a CNN model for solving MNIST,
-which utilizes D-Adaption.
+which utilizes D-Adaptation.
 
 The two relevant files are:
 
--   `d_adam`: Implementation of the Adam variant of D-Adaption
+-   `d_adam`: Implementation of the Adam variant of D-Adaptation
 -   `train_mnist`: CNN Model for MNIST
 
 The code closely follows the official implementation.
