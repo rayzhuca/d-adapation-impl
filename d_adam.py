@@ -23,9 +23,9 @@ class DAdam(Optimizer):
 
         sk_l1 = 0.0
         d, k = group['d'], group['k']
+        lr = max(group['lr'] for group in self.param_groups)
         dlr = d*lr
         growth_rate = group['growth_rate']
-        lr = max(group['lr'] for group in self.param_groups)
         sqrt_beta2 = beta2**(0.5)
         numerator_acum = 0.0
 

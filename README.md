@@ -16,59 +16,74 @@ The code closely follows the official implementation.
 Output for standard Adam
 
 ```
---- Start Training ---
-Epoch 1: Accuracy = 0.9699, Loss = 0.1021
-Epoch 2: Accuracy = 0.9896, Loss = 0.0315
-Epoch 3: Accuracy = 0.9937, Loss = 0.0201
-Epoch 4: Accuracy = 0.9944, Loss = 0.0182
-Epoch 5: Accuracy = 0.9956, Loss = 0.0131
-Epoch 6: Accuracy = 0.9965, Loss = 0.0111
-Epoch 7: Accuracy = 0.9968, Loss = 0.0103
-Epoch 8: Accuracy = 0.9974, Loss = 0.0082
-Epoch 9: Accuracy = 0.9980, Loss = 0.0064
-Epoch 10: Accuracy = 0.9972, Loss = 0.0083
+Epoch 1: Accuracy = 0.9715, Loss = 0.0986
+Epoch 2: Accuracy = 0.9895, Loss = 0.0331
+Epoch 3: Accuracy = 0.9927, Loss = 0.0230
+Epoch 4: Accuracy = 0.9949, Loss = 0.0158
+Epoch 5: Accuracy = 0.9959, Loss = 0.0134
+Epoch 6: Accuracy = 0.9962, Loss = 0.0114
+Epoch 7: Accuracy = 0.9969, Loss = 0.0093
+Epoch 8: Accuracy = 0.9969, Loss = 0.0094
+Epoch 9: Accuracy = 0.9980, Loss = 0.0063
+Epoch 10: Accuracy = 0.9977, Loss = 0.0070
 
 --- Start Testing ---
 
 Training Set Metrics:
-Macro Accuracy:  0.9971
-Macro Precision: 0.9971
-Macro Recall:    0.9971
-Macro F1-score:  0.9971
+Macro Accuracy:  0.9978
+Macro Precision: 0.9978
+Macro Recall:    0.9977
+Macro F1-score:  0.9978
 
 Test Set Metrics:
-Macro Accuracy:  0.9913
-Macro Precision: 0.9913
-Macro Recall:    0.9911
-Macro F1-score:  0.9912
+Macro Accuracy:  0.9918
+Macro Precision: 0.9918
+Macro Recall:    0.9916
+Macro F1-score:  0.9917
 ```
+
+Screenshot
+
+![d-adapted console](imgs/a_c.png)
+
+Graph
+
+![d-adapted graph](imgs/a_g.png)
 
 Output for D-Adapted Adam
 
 ```
 --- Start Training ---
-Epoch 1: Accuracy = 0.9617, Loss = 0.1163
-Epoch 2: Accuracy = 0.9921, Loss = 0.0263
-Epoch 3: Accuracy = 0.9950, Loss = 0.0167
-Epoch 4: Accuracy = 0.9959, Loss = 0.0126
-Epoch 5: Accuracy = 0.9967, Loss = 0.0107
-Epoch 6: Accuracy = 0.9965, Loss = 0.0104
-Epoch 7: Accuracy = 0.9972, Loss = 0.0086
-Epoch 8: Accuracy = 0.9968, Loss = 0.0090
-Epoch 9: Accuracy = 0.9980, Loss = 0.0059
-Epoch 10: Accuracy = 0.9977, Loss = 0.0069
+Epoch 1: Accuracy = 0.9619, Loss = 0.1181
+Epoch 2: Accuracy = 0.9915, Loss = 0.0274
+Epoch 3: Accuracy = 0.9948, Loss = 0.0163
+Epoch 4: Accuracy = 0.9954, Loss = 0.0136
+Epoch 5: Accuracy = 0.9968, Loss = 0.0098
+Epoch 6: Accuracy = 0.9969, Loss = 0.0102
+Epoch 7: Accuracy = 0.9976, Loss = 0.0078
+Epoch 8: Accuracy = 0.9974, Loss = 0.0078
+Epoch 9: Accuracy = 0.9976, Loss = 0.0074
+Epoch 10: Accuracy = 0.9986, Loss = 0.0046
 
 --- Start Testing ---
 
 Training Set Metrics:
-Macro Accuracy:  0.9985
-Macro Precision: 0.9985
-Macro Recall:    0.9985
-Macro F1-score:  0.9985
+Macro Accuracy:  0.9980
+Macro Precision: 0.9980
+Macro Recall:    0.9980
+Macro F1-score:  0.9980
 
 Test Set Metrics:
-Macro Accuracy:  0.9923
-Macro Precision: 0.9922
-Macro Recall:    0.9922
-Macro F1-score:  0.9922
+Macro Accuracy:  0.9926
+Macro Precision: 0.9926
+Macro Recall:    0.9926
+Macro F1-score:  0.9926
 ```
+
+Screenshot
+
+![adam console](imgs/d_c.png)
+
+Graph
+
+![adam graph](imgs/d_g.png)

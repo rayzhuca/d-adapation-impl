@@ -46,8 +46,8 @@ class MnistModel(nn.Module):
         return x
 
     def train_model(self, X, y):
-        # optimizer = torch.optim.Adam(self.parameters(), lr=self.learning_rate)
-        optimizer = DAdam(self.parameters())
+        optimizer = torch.optim.Adam(self.parameters(), lr=self.learning_rate)
+        # optimizer = DAdam(self.parameters())
         loss_function = nn.CrossEntropyLoss()
         dataloader = DataLoader(TensorDataset(X, y), batch_size=128, shuffle=True)
         self.batches_per_epoch = len(dataloader)
